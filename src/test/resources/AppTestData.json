@@ -1,0 +1,14 @@
+{
+	"empFirstName":"Salman",
+	"empMiddleName":"Salim",
+	"empLastName": "Khan",
+	"empName":"Salman Khan",
+	"empID": "0007",
+	"userRole":"ESS",
+	"updatedUserRole":"Admin",
+	"status": "Disabled",
+	"updatedStatus": "Enabled",
+	"userName":"KhanSalman",
+	"updatedUserName":"UpdatedSalman",
+	"password":"Salman@123"
+}

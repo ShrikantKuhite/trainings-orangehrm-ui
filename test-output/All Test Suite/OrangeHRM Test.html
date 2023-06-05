@@ -1,0 +1,308 @@
+<html>
+<head>
+<title>TestNG:  OrangeHRM Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>OrangeHRM Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>6/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Jun 05 17:51:54 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>86 seconds (86617 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.orangehrm.tests.UserManagementTest.deleteEmployeeAndVerify()'><b>deleteEmployeeAndVerify</b><br>Test class: com.orangehrm.tests.UserManagementTest<br/>
+<a href="#Output-507575219" onClick='toggleBox("Output-507575219", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-507575219" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-507575219">
+Click PIM Menu<br/>
+PIM Menu clicked successfully...!!!<br/>
+Click on Reset button<br/>
+Reset button clicked successfully...!!!<br/>
+Enter Employee ID : null<br/>
+</div>
+</td>
+<td><div><pre>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:98)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at com.sun.proxy.$Proxy18.sendKeys(Unknown Source)
+	at com.orangehrm.pages.EmployeePage.enterEmployeeID(EmployeePage.java:100)
+	at com.orangehrm.tests.UserManagementTest.deleteEmployeeAndVerify(UserManagementTest.java:288)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace507575219", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace507575219'><pre>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:98)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at com.sun.proxy.$Proxy18.sendKeys(Unknown Source)
+	at com.orangehrm.pages.EmployeePage.enterEmployeeID(EmployeePage.java:100)
+	at com.orangehrm.tests.UserManagementTest.deleteEmployeeAndVerify(UserManagementTest.java:288)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>com.orangehrm.tests.UserManagementTest@71812481</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.orangehrm.tests.UserManagementTest.updateUserAndVerify()'><b>updateUserAndVerify</b><br>Test class: com.orangehrm.tests.UserManagementTest<br/>
+<a href="#Output-1594424832" onClick='toggleBox("Output-1594424832", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1594424832" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1594424832">
+Click on Edit button<br/>
+Edit button clicked successfully...!!!<br/>
+Verify the Edit User page<br/>
+Edit User page verified successfully...!!!<br/>
+Select new User Role<br/>
+New User Role selected successfully...!!!<br/>
+Select new Status<br/>
+New Status selected successfully...!!!<br/>
+Enter new User Name<br/>
+New User Name entered successfully...!!!<br/>
+Click on Save button<br/>
+Save button clicked successfully...!!!<br/>
+Click on Reset button<br/>
+Reset button clicked successfully...!!!<br/>
+Enter an User Name<br/>
+User Name entered successfully...!!!<br/>
+Click on Search button<br/>
+Search button clicked successfully...!!!<br/>
+Verify the Searched Record<br/>
+Searched Record is Found...!!!<br/>
+Verify an updated User Name<br/>
+User Name updated successfully...!!!<br/>
+Verify an updated User Role<br/>
+User Role updated successfully...!!!<br/>
+Verify an Employee Name<br/>
+Employee Name verified successfully...!!!<br/>
+Verify updated Status<br/>
+Status updated successfully...!!!<br/>
+</div>
+</td>
+<td></td>
+<td>14</td>
+<td>com.orangehrm.tests.UserManagementTest@71812481</td></tr>
+<tr>
+<td title='com.orangehrm.tests.EmployeeTest.addEmployee()'><b>addEmployee</b><br>Test class: com.orangehrm.tests.EmployeeTest<br/>
+<a href="#Output-1261545224" onClick='toggleBox("Output-1261545224", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1261545224" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1261545224">
+Click on PIM menu<br/>
+PIM menu clicked successfully...!!!<br/>
+Click on Add button<br/>
+Add button clicked successfully...!!!<br/>
+Enter an Employee First, Middle and Last Name<br/>
+Employee First, Middle and Last Name entered successfully...!!!<br/>
+Employee ID does not exists, We can use system generated...!!!<br/>
+Upload Employee picture<br/>
+Employee picture uploaded successfully...!!!<br/>
+Click on Save button<br/>
+Save button clicked successfully...!!!<br/>
+</div>
+</td>
+<td></td>
+<td>24</td>
+<td>com.orangehrm.tests.EmployeeTest@5dcb4f5f</td></tr>
+<tr>
+<td title='com.orangehrm.tests.UserManagementTest.searchUserAndVerify()'><b>searchUserAndVerify</b><br>Test class: com.orangehrm.tests.UserManagementTest<br/>
+<a href="#Output-243440025" onClick='toggleBox("Output-243440025", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-243440025" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-243440025">
+Click on Reset button<br/>
+Reset button clicked successfully...!!!<br/>
+Enter an User Name<br/>
+User Name entered successfully...!!!<br/>
+Click on Search button<br/>
+Search button clicked successfully...!!!<br/>
+Verify the Searched Record<br/>
+Searched Record is Found...!!!<br/>
+Verify an User Name<br/>
+User Name verified successfully...!!!<br/>
+Verify an User Role<br/>
+User Role verified successfully...!!!<br/>
+Verify an Employee Name<br/>
+Employee Name verified successfully...!!!<br/>
+Verify the Status<br/>
+Status verified successfully...!!!<br/>
+</div>
+</td>
+<td></td>
+<td>6</td>
+<td>com.orangehrm.tests.UserManagementTest@71812481</td></tr>
+<tr>
+<td title='com.orangehrm.tests.UserManagementTest.deleteUserAndVerify()'><b>deleteUserAndVerify</b><br>Test class: com.orangehrm.tests.UserManagementTest<br/>
+<a href="#Output-1709913495" onClick='toggleBox("Output-1709913495", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1709913495" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1709913495">
+Click on Delete button<br/>
+Delete button clicked successfully....!!!<br/>
+Click on Reset button<br/>
+Reset button clicked successfully...!!!<br/>
+Enter an User Name<br/>
+User Name entered successfully...!!!<br/>
+Click on Search button<br/>
+Search button clicked successfully...!!!<br/>
+Verify the Searched Record<br/>
+Searched Record does not Found, so User deleted successfully...!!!<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>com.orangehrm.tests.UserManagementTest@71812481</td></tr>
+<tr>
+<td title='com.orangehrm.tests.UserManagementTest.addUser()'><b>addUser</b><br>Test class: com.orangehrm.tests.UserManagementTest<br/>
+<a href="#Output-820804897" onClick='toggleBox("Output-820804897", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-820804897" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-820804897">
+Click on Admin Menu<br/>
+Admin Menu clicked successfully...!!!<br/>
+Click on Add button<br/>
+Add button clicked successfully...!!!<br/>
+Select an User Role<br/>
+User Role selected successfully...!!!<br/>
+Enter an Employee Name<br/>
+Employee Name entered successfully...!!!<br/>
+Select the Status<br/>
+Status selected successfully...!!!<br/>
+Enter an User Name<br/>
+User Name entered successfully...!!!<br/>
+Enter the Password<br/>
+Password entered successfully...!!!<br/>
+Enter the Confirm Password<br/>
+Confirm Password entered successfully...!!!<br/>
+Click on Save button<br/>
+Save button clicked successfully...!!!<br/>
+</div>
+</td>
+<td></td>
+<td>12</td>
+<td>com.orangehrm.tests.UserManagementTest@71812481</td></tr>
+<tr>
+<td title='com.orangehrm.tests.LoginTest.loginToApplication()'><b>loginToApplication</b><br>Test class: com.orangehrm.tests.LoginTest<br/>
+<a href="#Output-662409124" onClick='toggleBox("Output-662409124", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-662409124" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-662409124">
+Enter an User Name<br/>
+User Name entered successfully...!!!<br/>
+Enter the Password<br/>
+Password entered successfully...!!!<br/>
+Click on Login button<br/>
+Login button clicked successfully...!!!<br/>
+Verify Application logged In<br/>
+Application logged In successfully...!!!<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>com.orangehrm.tests.LoginTest@2a62b5bc</td></tr>
+</table><p>
+</body>
+</html>
